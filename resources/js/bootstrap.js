@@ -48,6 +48,6 @@ window.Echo = new Echo({
     broadcaster: 'pusher',
     key: 'whatever_app_key',
     wsHost: window.location.hostname,
-    wsPort: 6001,
+    wsPort: 6002,
     disableStats: true,
 });
