@@ -11,7 +11,8 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
-} catch (e) {}
+} catch (e) {
+}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -47,7 +48,9 @@ window.Pusher = require('pusher-js');
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: 'whatever_app_key',
-    wssHost: window.location.hostname,
+    wsHost: 'https://sockets.salfade.com',
+    wssHost: 'https://sockets.salfade.com',
+    wsPort: 6002,
     wssPort: 6002,
     disableStats: true,
 });
