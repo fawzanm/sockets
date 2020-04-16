@@ -48,9 +48,10 @@ window.Pusher = require('pusher-js');
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: 'whatever_app_key',
-    wsHost: 'https://sockets.salfade.com',
-    wssHost: 'https://sockets.salfade.com',
+    wsHost: window.location.hostname,
     wsPort: 6002,
     wssPort: 6002,
     disableStats: true,
+    encrypted: false,
+    enabledTransports: ['ws', 'wss'],
 });
